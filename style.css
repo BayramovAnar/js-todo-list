@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #65a4f6, #bd85fd);
+  color: white;
+  min-height: 100vh;
+}
+
+header h1 {
+  font-weight: 500;
+}
+
+header {
+  font-size: 3rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 3rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  color: #398fff;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #398fff;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+  position: relative;
+}
+
+.todo {
+  margin: 1.5rem;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.complete-btn,
+.trash-btn {
+  background: #398fff;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.complete-btn {
+  background: rgb(36, 211, 36);
+}
+
+.trash-btn {
+  background: rgb(224, 55, 55);
+}
+
+.todo-item {
+  padding: 0rem 1rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(30rem) rotateZ(180deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #398fff;
+  width: 15rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  order: 1;
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select::after {
+  content: "\25bc";
+  position: absolute;
+  background: #398fff;
+  top: 0;
+  right: 0;
+  padding: 1.1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: #398fff;
+}
+
+.left {
+  height: 5rem;
+  position: absolute;
+  bottom: 50%;
+  left: 10rem;
+}
+
+.right {
+  height: 5rem;
+  position: absolute;
+  bottom: 25rem;
+  right: 10rem;
+}
+
+.right img {
+  height: 25rem;
+}
+
+.left img {
+  height: 25rem;
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .cont {
+    flex-direction: column;
+  }
+  .filter-todo {
+    min-width: 50vw;
+    margin-bottom: 2rem;
+  }
+}
